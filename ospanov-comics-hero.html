@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ospanov Comics — Герой: Ауро-Страж</title>
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#0f1720;
+      --accent:#a58cff;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+    }
+    body{margin:0;font-family:Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#05060a 0%,#0b0f17 100%);color:#e6eef8;}
+    .wrap{max-width:980px;margin:48px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.02));border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    header{display:flex;gap:18px;align-items:center}
+    .logo{width:92px;height:92px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5bd1ff);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(165,140,255,0.12)}
+    .logo svg{width:68px;height:68px;opacity:0.98}
+    h1{margin:0;font-size:26px;letter-spacing:0.4px}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:13px}
+    .hero-card{margin-top:22px;display:grid;grid-template-columns:320px 1fr;gap:22px}
+    .portrait{background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .portrait .svg-wrap{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:10px;padding:8px;display:flex;align-items:center;justify-content:center}
+    .info{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    h2{margin:0;font-size:20px}
+    .section{margin-top:14px}
+    .muted{color:var(--muted);font-size:13px}
+    .powers{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .power{background:rgba(165,140,255,0.08);padding:8px 10px;border-radius:999px;font-size:13px;border:1px solid rgba(165,140,255,0.06)}
+    .bio{line-height:1.5;color:#dfe9ff;margin-top:10px}
+    .stats{display:flex;gap:10px;margin-top:12px}
+    .stat{flex:1;background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;text-align:center;border:1px solid rgba(255,255,255,0.02)}
+    .stat strong{display:block;font-size:18px}
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+    code{background:rgba(255,255,255,0.02);padding:2px 6px;border-radius:6px;font-family:monospace;font-size:13px}
+    @media(max-width:820px){.hero-card{grid-template-columns:1fr} .portrait{order:2}}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <!-- simple emblem SVG -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#a58cff"/>
+              <stop offset="1" stop-color="#5bd1ff"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#g)"/>
+          <path d="M20 42 L32 18 L44 42 Z" fill="#08131a" opacity="0.9"/>
+          <circle cx="32" cy="34" r="4" fill="#dfe9ff" opacity="0.9"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Ауро‑Страж — рандомный герой комикса</h1>
+        <div class="subtitle">Файл: <code>ospanov-comics-hero.html</code> — полное описание персонажа, мир и заметки для сюжета.</div>
+      </div>
+    </header>
+
+    <div class="hero-card" aria-label="Карточка героя">
+      <aside class="portrait" aria-hidden="false">
+        <div style="text-align:center">
+          <div style="font-size:13px;color:var(--muted)">Псевдоним</div>
+          <h2 style="margin-top:6px">Ауро‑Страж</h2>
+          <div style="margin-top:10px" class="svg-wrap" aria-hidden="true">
+            <!-- stylized hero silhouette SVG -->
+            <svg viewBox="0 0 200 200" width="260" height="260" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="lg" x1="0" x2="1">
+                  <stop offset="0" stop-color="#a58cff"/>
+                  <stop offset="1" stop-color="#5bd1ff"/>
+                </linearGradient>
+                <filter id="g1" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="b"/>
+                  <feBlend in="SourceGraphic" in2="b"/>
+                </filter>
+              </defs>
+              <rect width="200" height="200" rx="14" fill="#071019"/>
+              <g transform="translate(40,18)" filter="url(#g1)">
+                <path d="M60 6 C92 28, 120 48, 108 86 C96 124, 44 124, 32 86 C20 48, 28 26, 60 6 Z" fill="url(#lg)" opacity="0.95"/>
+                <path d="M60 36 L72 56 L48 56 Z" fill="#051018" opacity="0.85"/>
+              </g>
+              <circle cx="120" cy="54" r="6" fill="#dfe9ff" opacity="0.9"/>
+            </svg>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="muted">Настоящее имя</div>
+          <div style="margin-top:6px"><strong>Оспанов Айдын</strong></div>
+          <div class="muted" style="margin-top:10px">Происхождение</div>
+          <div style="margin-top:6px">Малый портовый город, постсоветский мегаполис на границе технологий и древних легенд.</div>
+        </div>
+      </aside>
+
+      <section class="info">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="muted">Альтер эго</div>
+            <h2 style="margin-top:6px">Айдын Оспанов — инженер‑археолог</h2>
+          </div>
+          <div style="text-align:right">
+            <div class="muted">Позиция</div>
+            <div style="margin-top:6px"><strong>Защитник сумеречных границ</strong></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="muted">Краткое описание</div>
+          <p class="bio">Ауро‑Страж — это герой, который появился на пересечении старых обрядов и современной науки. После того как Айдын обнаружил фрагмент древнего артефакта в руинах недалёко от своего родного города, он обрел способность манипулировать локальными градиентами света и тьмы. Он использует свет как материю — формирует щиты, лезвия и невидимые якоря, способные удержать сущности из «пограничной тьмы». В мире, где технологии вытесняют фольклор, Ауро‑Страж связан с обоими полюсами: он — учёный и хранитель, борющийся за хрупкий баланс между прогрессом и древними силами.</p>
+        </div>
+
+        <div class="section">
+          <div class="muted">Сильные стороны</div>
+          <div class="powers">
+            <div class="power">Формирование света — щиты и лезвия</div>
+            <div class="power">Пограничное восприятие — видит сущности между мирами</div>
+            <div class="power">Тактический интеллект — инженерный подход к боям</div>
+            <div class="power">Регенерация при контакте с источниками света</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="muted">Слабые стороны</div>
+          <ul class="muted" style="margin-top:8px">
+            <li>Слабость в абсолютной темноте — артефакт нуждается в слабом источнике света.</li>
+            <li>Эмоциональная уязвимость: память о потерянных близких активирует нестабильные вспышки силы.</li>
+            <li>Артефакт требует детального техно‑ритуального обслуживания — если Айдын не поддерживает его, способности ослабевают.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="muted">Происхождение силы (синопсис)</div>
+          <p class="bio">Во время раскопок Айдын нашёл не просто реликвию, а фрагмент «Ауро‑Сферы» — устройства, созданного древней цивилизацией для поддержания барьера между нашим миром и слоями тьмы. Вмешательство корпорации «Неон‑Холдинг» пробудило остатки барьера, и Айдын, рискнув подключиться к фрагменту, стал его единственным носителем. С тех пор он балансирует между научной логикой и ритуальными практиками, чтобы сдерживать угрозы, появляющиеся через прорехи в сумеречной реальности.</p>
+        </div>
+
+        <div class="section">
+          <div class="muted">Внешность и экипировка</div>
+          <p class="bio">Одет в темно‑графитовую техническую броню с интегрированными световыми контурами, которые мерцают при использовании силы. Маска закрывает верхнюю часть лица — оставляя рот и подбородок открытыми, чтобы показать человеческое лицо героя. На руке носит многофункциональный браслет‑манипулятор, собранный из археологических элементов и современных плат.</p>
+
+        </div>
+
+        <div class="section">
+          <div class="muted">Набор сюжетных идей</div>
+          <ol style="margin-top:8px">
+            <li>Айдын расследует исчезновение старых маяков света — каждый маяк связан с узлом барьера.</li>
+            <li>Конфликт с «Неон‑Холдинг»: корпорация хочет использовать фрагменты Ауро‑Сферы для энергетической власти.</li>
+            <li>Чёрный карнавал — группа существ из пограничной тьмы организует ритуал, ослабляющий город.</li>
+            <li>Личное испытание: выбор между спасением города или восстановлением памяти о погибшей сестре.</li>
+          </ol>
+        </div>
+
+        <div class="section">
+          <div class="muted">Союзники и противники</div>
+          <div style="margin-top:8px">
+            <strong>Союзники:</strong> бывшая журналистка Мария Ким, хакер‑активист «Проводник», старший хранитель из ордена «Сумеречники».<br/>
+            <strong>Противники:</strong> корпорация «Неон‑Холдинг», лидер культистов «Крайний Шёлк», тёмные сущности из других пластов реальности.
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="muted">Короткий отрывок сцены</div>
+          <p class="bio"><em>Ночь. Портовой причал. Айдын стоит на краю, свет фар растворяет лёгкую дымку. Перед ним — прореха, как рваный занавес, и из неё вырываются тени, которые не тянутся к свету, а как будто ищут его. Айдын глубоко вдыхает, активирует браслет: на ладони расплывается холодный свет — тонкое лезвие, которым он разрезает скользящую тьму. С каждой вспышкой память о сестре возвращается — и с каждой вспышкой контроль становится тоньше. Он знает: если потеряет равновесие, город исчезнет между мирами.</em></p>
+        </div>
+
+        <div class="section stats" aria-hidden="false">
+          <div class="stat"><span class="muted">Сила</span><strong>7/10</strong></div>
+          <div class="stat"><span class="muted">Интеллект</span><strong>9/10</strong></div>
+          <div class="stat"><span class="muted">Выносливость</span><strong>6/10</strong></div>
+          <div class="stat"><span class="muted">Мистичность</span><strong>8/10</strong></div>
+        </div>
+
+      </section>
+    </div>
+
+    <footer>
+      Сгенерировано: Ospanov Comics — полный лист персонажа для идеи комикса. Используйте содержимое в своих проектах.
+    </footer>
+  </div>
+</body>
+</html>
